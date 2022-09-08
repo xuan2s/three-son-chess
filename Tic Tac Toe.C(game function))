@@ -110,12 +110,12 @@ void Computer(char board[ROW][COL],int row, int col)
 	DisplayBoard(board, ROW, COL);
 }
 
-int Winner(char board[ROW][COL], int row, int col)
+int Winner(int ent,char board[ROW][COL], int row, int col)
 {
 	int i;
 	int j;
 	//判断玩家1赢
-
+	if(ent==1)
 	{
 		for (i = 0;i < row; i++)
 		{
@@ -145,7 +145,7 @@ int Winner(char board[ROW][COL], int row, int col)
 		}
 	}
 	//判定玩家2赢
-
+	if (ent == 3)
 	{
 		for (i = 0;i < row; i++)
 		{
@@ -176,7 +176,7 @@ int Winner(char board[ROW][COL], int row, int col)
 		}
 	}
 	//判断电脑赢
-
+	if (ent == 2)
 	{
 		for (i = 0;i < row; i++)
 		{
@@ -206,13 +206,13 @@ int Winner(char board[ROW][COL], int row, int col)
 		}
 	}
 	//判断继续
-		for (i = 0;i < row; i++)
+	for (i = 0;i < row; i++)
+	{
+		for (j = 0;j < col;j++)
 		{
-			for (j = 0;j < col;j++)
-			{
-				if (board[i][j] == ' ')
-					return 3;
-			}
+			if (board[i][j] == ' ')
+				return 3;
 		}
+	}
 	return 2;//平局
 }
