@@ -5,4 +5,4 @@ void InitBoard(char board[ROW][COL],int row,int col);
 void Player1(char board[ROW][COL], int row, int col);
 void Player2(char board[ROW][COL], int row, int col);
 void Computer(char board[ROW][COL], int row, int col);
-int Winner(char board[ROW][COL],int row, int col);
+int Winner(int ent，char board[ROW][COL],int row, int col);
