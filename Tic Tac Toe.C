@@ -15,7 +15,7 @@ void game1()
 	while (1)
 	{
 		Player1(board, ROW, COL);
-		ret=Winner(board, ROW, COL);
+		ret=Winner(1,board, ROW, COL);
 		if (ret == 0)//玩家赢
 		{
 			printf("玩家赢\n");
@@ -28,7 +28,7 @@ void game1()
 		}
 		printf("\n");
 		Computer(board, ROW, COL);
-		ret = Winner(board, ROW, COL);
+		ret = Winner(2,board, ROW, COL);
 		if (ret == 1)//电脑赢
 		{
 			printf("电脑赢\n");
@@ -51,7 +51,7 @@ void game2()
 	while (1)
 	{
 		Player1(board, ROW, COL);
-		ret = Winner(board, ROW, COL);
+		ret = Winner(1,board, ROW, COL);
 		if (ret == 0)//玩家1赢
 		{
 			printf("玩家1赢\n");
@@ -65,7 +65,7 @@ void game2()
 		printf("\n");//玩家1判定
 
 		Player2(board, ROW, COL);
-		ret = Winner(board, ROW, COL);
+		ret = Winner(3,board, ROW, COL);
 		if (ret == 4)//玩家2赢
 		{
 			printf("玩家2赢\n");
@@ -90,7 +90,7 @@ void testbug()
 	{
 		int ret;
 		Player1(board, ROW, COL);
-		ret = Winner(board, ROW, COL);
+		ret = Winner(1,board, ROW, COL);
 		if (ret == 0)
 		{
 			printf("玩家1赢\n");
